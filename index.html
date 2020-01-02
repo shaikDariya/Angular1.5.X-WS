@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Zing</title>
+  </head>
+  <body>
+    <div id="app" class="sans-serif">
+      <my-component></my-component>
+      <div ng-controller="MyController">
+        <p>My Name is {{name}}</p>
+        <p>My Brick Count is {{control.count}} updated by custom-isolated</p>
+        <button ng-click="trigger()">Trigger Change</button>
+        <custom-isolated brick="brick" control="control">
+          I am Inside of Directive Element {{brick.name}}
+        </custom-isolated>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
